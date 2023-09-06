@@ -13,8 +13,8 @@ export default function Navbar() {
     return (
         <S.Header>
             <S.LogoDiv onClick={handleHomeClick}>
-                <S.LogoImg src="https://www.github.com/duh0127.png" alt="Logo do meu site" />
-                <S.LogoText>551763</S.LogoText>
+                <S.LogoImg src="https://www.github.com/vitormiranda11.png" alt="Logo do meu site" />
+                <S.LogoText>551451</S.LogoText>
             </S.LogoDiv>
             <S.Navbar>
                     <S.NavbarLink href="/">Home</S.NavbarLink>
