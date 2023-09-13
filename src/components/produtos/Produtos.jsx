@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { ListaProdutos } from "./ListaProdutos";
+import classes from"./Produtos.module.css"; 
 
 export default function Produtos() {
 
@@ -9,9 +10,9 @@ export default function Produtos() {
         <main>
             <h1>PRODUTOS</h1>
             <div>
-                <table>
+                <table className= {classes.tableStyle}>
                     <thead>
-                        <tr>
+                        <tr className={classes.tableHeaderStyle}>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Descrição</th>
@@ -21,12 +22,12 @@ export default function Produtos() {
                     </thead>
                     <tbody>
                         {ListaProdutos.map((produto, index) => (
-                            <tr key={index}>
-                                <td>{produto.id}</td>
-                                <td>{produto.nome}</td>
-                                <td>{produto.desc}</td>
-                                <td>{produto.preco}</td>
-                                <td>
+                            <tr key={index} className= {classes.tableLineStyle}>
+                                <td className={classes.tableDataStyle}> {produto.id}</td>
+                                <td className={classes.tableDataStyle}> {produto.nome}</td>
+                                <td className={classes.tableDataStyle}> {produto.desc}</td>
+                                <td className={classes.tableDataStyle}> {produto.preco}</td>
+                                <td className={classes.tableDataStyle}> 
                                     <Link to={`/produtos/editar/${produto.id}`}>
                                         <FaEdit size={24} color="green" />
                                     </Link>
